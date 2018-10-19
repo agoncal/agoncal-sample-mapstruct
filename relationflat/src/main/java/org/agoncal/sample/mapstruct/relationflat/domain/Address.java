@@ -22,8 +22,6 @@ public class Address implements Serializable {
 
     private String zipCode;
 
-    private String additionalInformation;
-
     private Country country;
 
     public Long getId() {
@@ -99,19 +97,6 @@ public class Address implements Serializable {
         this.zipCode = zipCode;
     }
 
-    public String getAdditionalInformation() {
-        return additionalInformation;
-    }
-
-    public Address additionalInformation(String additionalInformation) {
-        this.additionalInformation = additionalInformation;
-        return this;
-    }
-
-    public void setAdditionalInformation(String additionalInformation) {
-        this.additionalInformation = additionalInformation;
-    }
-
     public Country getCountry() {
         return country;
     }
@@ -155,7 +140,6 @@ public class Address implements Serializable {
             ", city='" + getCity() + "'" +
             ", state='" + getState() + "'" +
             ", zipCode='" + getZipCode() + "'" +
-            ", additionalInformation='" + getAdditionalInformation() + "'" +
             "}";
     }
 }

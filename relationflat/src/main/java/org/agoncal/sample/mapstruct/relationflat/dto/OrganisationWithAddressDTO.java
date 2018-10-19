@@ -44,6 +44,11 @@ public class OrganisationWithAddressDTO implements Serializable {
         return slug;
     }
 
+    public OrganisationWithAddressDTO slug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+
     public void setSlug(String slug) {
         this.slug = slug;
     }
@@ -52,12 +57,22 @@ public class OrganisationWithAddressDTO implements Serializable {
         return name;
     }
 
+    public OrganisationWithAddressDTO name(String name) {
+        this.name = name;
+        return this;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public OrganisationWithAddressDTO description(String description) {
+        this.description = description;
+        return this;
     }
 
     public void setDescription(String description) {
@@ -80,12 +95,22 @@ public class OrganisationWithAddressDTO implements Serializable {
         this.addressStreet = addressStreet;
     }
 
+    public OrganisationWithAddressDTO addressStreet(String addressStreet) {
+        this.addressStreet = addressStreet;
+        return this;
+    }
+
     public String getAddressStreet2() {
         return addressStreet2;
     }
 
     public void setAddressStreet2(String addressStreet2) {
         this.addressStreet2 = addressStreet2;
+    }
+
+    public OrganisationWithAddressDTO addressStreet2(String addressStreet2) {
+        this.addressStreet2 = addressStreet2;
+        return this;
     }
 
     public String getAddressCity() {
@@ -96,6 +121,11 @@ public class OrganisationWithAddressDTO implements Serializable {
         this.addressCity = addressCity;
     }
 
+    public OrganisationWithAddressDTO addressCity(String addressCity) {
+        this.addressCity = addressCity;
+        return this;
+    }
+
     public String getAddressState() {
         return addressState;
     }
@@ -104,12 +134,22 @@ public class OrganisationWithAddressDTO implements Serializable {
         this.addressState = addressState;
     }
 
+    public OrganisationWithAddressDTO addressState(String addressState) {
+        this.addressState = addressState;
+        return this;
+    }
+
     public String getAddressZipCode() {
         return addressZipCode;
     }
 
     public void setAddressZipCode(String addressZipCode) {
         this.addressZipCode = addressZipCode;
+    }
+
+    public OrganisationWithAddressDTO addressZipCode(String addressZipCode) {
+        this.addressZipCode = addressZipCode;
+        return this;
     }
 
     public Long getCountryId() {
@@ -126,6 +166,11 @@ public class OrganisationWithAddressDTO implements Serializable {
 
     public void setCountryName(String countryName) {
         this.countryName = countryName;
+    }
+
+    public OrganisationWithAddressDTO countryName(String countryName) {
+        this.countryName = countryName;
+        return this;
     }
 
     @Override
