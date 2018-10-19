@@ -1,8 +1,9 @@
-# Samples - Java
+# Samples - MapStruct
 
-Several samples about Java as a all :
+Several samples about MapStruct
 
-* JMH : Samples about Java Micro Benchmarking
+* relationandid : Keeps relations between domain and dto and adds ids
+* relationflat : Maps relations in domain to a flat dto
 
 # Licensing
 
