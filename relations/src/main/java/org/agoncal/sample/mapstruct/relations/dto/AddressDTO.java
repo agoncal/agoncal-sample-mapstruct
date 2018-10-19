@@ -1,14 +1,12 @@
-package org.agoncal.sample.mapstruct.relationandid.domain;
+package org.agoncal.sample.mapstruct.relations.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A Address.
+ * A DTO for the Address entity.
  */
-public class Address implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class AddressDTO implements Serializable {
 
     private Long id;
 
@@ -22,7 +20,7 @@ public class Address implements Serializable {
 
     private String zipCode;
 
-    private Country country;
+    private CountryDTO country;
 
     public Long getId() {
         return id;
@@ -36,7 +34,7 @@ public class Address implements Serializable {
         return street;
     }
 
-    public Address street(String street) {
+    public AddressDTO street(String street) {
         this.street = street;
         return this;
     }
@@ -49,7 +47,7 @@ public class Address implements Serializable {
         return street2;
     }
 
-    public Address street2(String street2) {
+    public AddressDTO street2(String street2) {
         this.street2 = street2;
         return this;
     }
@@ -62,7 +60,7 @@ public class Address implements Serializable {
         return city;
     }
 
-    public Address city(String city) {
+    public AddressDTO city(String city) {
         this.city = city;
         return this;
     }
@@ -75,7 +73,7 @@ public class Address implements Serializable {
         return state;
     }
 
-    public Address state(String state) {
+    public AddressDTO state(String state) {
         this.state = state;
         return this;
     }
@@ -88,7 +86,7 @@ public class Address implements Serializable {
         return zipCode;
     }
 
-    public Address zipCode(String zipCode) {
+    public AddressDTO zipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
@@ -97,16 +95,16 @@ public class Address implements Serializable {
         this.zipCode = zipCode;
     }
 
-    public Country getCountry() {
+    public CountryDTO getCountry() {
         return country;
     }
 
-    public Address country(Country country) {
+    public AddressDTO country(CountryDTO country) {
         this.country = country;
         return this;
     }
 
-    public void setCountry(Country country) {
+    public void setCountry(CountryDTO country) {
         this.country = country;
     }
 
@@ -118,11 +116,12 @@ public class Address implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Address address = (Address) o;
-        if (address.getId() == null || getId() == null) {
+
+        AddressDTO addressDTO = (AddressDTO) o;
+        if (addressDTO.getId() == null || getId() == null) {
             return false;
         }
-        return Objects.equals(getId(), address.getId());
+        return Objects.equals(getId(), addressDTO.getId());
     }
 
     @Override
@@ -132,7 +131,7 @@ public class Address implements Serializable {
 
     @Override
     public String toString() {
-        return "Address{" +
+        return "AddressDTO{" +
             "id=" + getId() +
             ", street='" + getStreet() + "'" +
             ", street2='" + getStreet2() + "'" +

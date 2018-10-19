@@ -1,4 +1,4 @@
-package org.agoncal.sample.mapstruct.relationandid.dto;
+package org.agoncal.sample.mapstruct.relations.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * A DTO for the Organisation entity.
  */
-public class OrganisationWithAddressDTO implements Serializable {
+public class OrganisationDTO implements Serializable {
 
     private Long id;
 
@@ -16,7 +16,6 @@ public class OrganisationWithAddressDTO implements Serializable {
 
     private String description;
 
-    private Long addressId;
     private AddressDTO address;
 
     public Long getId() {
@@ -31,12 +30,22 @@ public class OrganisationWithAddressDTO implements Serializable {
         return slug;
     }
 
+    public OrganisationDTO slug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+
     public void setSlug(String slug) {
         this.slug = slug;
     }
 
     public String getName() {
         return name;
+    }
+
+    public OrganisationDTO name(String name) {
+        this.name = name;
+        return this;
     }
 
     public void setName(String name) {
@@ -47,20 +56,22 @@ public class OrganisationWithAddressDTO implements Serializable {
         return description;
     }
 
+    public OrganisationDTO description(String description) {
+        this.description = description;
+        return this;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public Long getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(Long addressId) {
-        this.addressId = addressId;
-    }
-
     public AddressDTO getAddress() {
         return address;
+    }
+
+    public OrganisationDTO address(AddressDTO address) {
+        this.address = address;
+        return this;
     }
 
     public void setAddress(AddressDTO address) {
@@ -76,7 +87,7 @@ public class OrganisationWithAddressDTO implements Serializable {
             return false;
         }
 
-        OrganisationWithAddressDTO organisationDTO = (OrganisationWithAddressDTO) o;
+        OrganisationDTO organisationDTO = (OrganisationDTO) o;
         if (organisationDTO.getId() == null || getId() == null) {
             return false;
         }
@@ -91,10 +102,10 @@ public class OrganisationWithAddressDTO implements Serializable {
     @Override
     public String toString() {
         return "OrganisationDTO{" +
-            "id=" + getId() +
-            ", slug='" + getSlug() + "'" +
-            ", name='" + getName() + "'" +
-            ", description='" + getDescription() + "'" +
-            "}";
+                "id=" + getId() +
+                ", slug='" + getSlug() + "'" +
+                ", name='" + getName() + "'" +
+                ", description='" + getDescription() + "'" +
+                "}";
     }
 }

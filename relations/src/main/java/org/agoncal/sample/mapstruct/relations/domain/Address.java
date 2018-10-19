@@ -1,4 +1,4 @@
-package org.agoncal.sample.mapstruct.relationandid.domain;
+package org.agoncal.sample.mapstruct.relations.domain;
 
 import java.io.Serializable;
 import java.util.Objects;

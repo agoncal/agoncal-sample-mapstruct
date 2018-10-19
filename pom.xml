@@ -17,6 +17,7 @@
     <modules>
         <module>relationandid</module>
         <module>relationflat</module>
+        <module>relations</module>
     </modules>
 
     <dependencyManagement>

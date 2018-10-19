@@ -20,7 +20,7 @@ public class AddressDTO implements Serializable {
 
     private String zipCode;
 
-    private String additionalInformation;
+    private CountryDTO country;
 
     private Long countryId;
 
@@ -38,12 +38,22 @@ public class AddressDTO implements Serializable {
         return street;
     }
 
+    public AddressDTO street(String street) {
+        this.street = street;
+        return this;
+    }
+
     public void setStreet(String street) {
         this.street = street;
     }
 
     public String getStreet2() {
         return street2;
+    }
+
+    public AddressDTO street2(String street2) {
+        this.street2 = street2;
+        return this;
     }
 
     public void setStreet2(String street2) {
@@ -54,12 +64,22 @@ public class AddressDTO implements Serializable {
         return city;
     }
 
+    public AddressDTO city(String city) {
+        this.city = city;
+        return this;
+    }
+
     public void setCity(String city) {
         this.city = city;
     }
 
     public String getState() {
         return state;
+    }
+
+    public AddressDTO state(String state) {
+        this.state = state;
+        return this;
     }
 
     public void setState(String state) {
@@ -70,16 +90,26 @@ public class AddressDTO implements Serializable {
         return zipCode;
     }
 
+    public AddressDTO zipCode(String zipCode) {
+        this.zipCode = zipCode;
+        return this;
+    }
+
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
-    public String getAdditionalInformation() {
-        return additionalInformation;
+    public CountryDTO getCountry() {
+        return country;
     }
 
-    public void setAdditionalInformation(String additionalInformation) {
-        this.additionalInformation = additionalInformation;
+    public AddressDTO country(CountryDTO country) {
+        this.country = country;
+        return this;
+    }
+
+    public void setCountry(CountryDTO country) {
+        this.country = country;
     }
 
     public Long getCountryId() {
@@ -128,7 +158,6 @@ public class AddressDTO implements Serializable {
             ", city='" + getCity() + "'" +
             ", state='" + getState() + "'" +
             ", zipCode='" + getZipCode() + "'" +
-            ", additionalInformation='" + getAdditionalInformation() + "'" +
             ", country=" + getCountryId() +
             ", country='" + getCountryName() + "'" +
             "}";

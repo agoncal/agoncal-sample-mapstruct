@@ -1,14 +1,12 @@
-package org.agoncal.sample.mapstruct.relationandid.domain;
+package org.agoncal.sample.mapstruct.relations.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A Country.
+ * A DTO for the Country entity.
  */
-public class Country implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class CountryDTO implements Serializable {
 
     private Long id;
 
@@ -26,7 +24,7 @@ public class Country implements Serializable {
         return name;
     }
 
-    public Country name(String name) {
+    public CountryDTO name(String name) {
         this.name = name;
         return this;
     }
@@ -43,11 +41,12 @@ public class Country implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Country country = (Country) o;
-        if (country.getId() == null || getId() == null) {
+
+        CountryDTO countryDTO = (CountryDTO) o;
+        if (countryDTO.getId() == null || getId() == null) {
             return false;
         }
-        return Objects.equals(getId(), country.getId());
+        return Objects.equals(getId(), countryDTO.getId());
     }
 
     @Override
@@ -57,7 +56,7 @@ public class Country implements Serializable {
 
     @Override
     public String toString() {
-        return "Country{" +
+        return "CountryDTO{" +
                 "id=" + getId() +
                 ", name='" + getName() + "'" +
                 "}";
