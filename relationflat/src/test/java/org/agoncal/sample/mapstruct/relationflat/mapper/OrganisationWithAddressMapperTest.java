@@ -113,6 +113,8 @@ public class OrganisationWithAddressMapperTest {
         assertThat(domain.getSlug()).isEqualTo(DEFAULT_SLUG);
         assertThat(domain.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(domain.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        // Because all my address and country attributes are null
+        // I would like to have Mapstruct not to instanciate the Address object
         assertThat(domain.getAddress()).isNull();
     }
 
