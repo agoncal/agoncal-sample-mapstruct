@@ -18,6 +18,7 @@
         <module>relationandid</module>
         <module>relationflat</module>
         <module>relations</module>
+        <module>unmapped</module>
     </modules>
 
     <dependencyManagement>

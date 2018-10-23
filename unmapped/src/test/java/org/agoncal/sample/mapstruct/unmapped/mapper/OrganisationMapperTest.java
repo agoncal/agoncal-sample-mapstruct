@@ -1,12 +1,11 @@
-package org.agoncal.sample.mapstruct.relationandid.mapper;
+package org.agoncal.sample.mapstruct.unmapped.mapper;
 
-import org.agoncal.sample.mapstruct.relations.domain.Address;
-import org.agoncal.sample.mapstruct.relations.domain.Country;
-import org.agoncal.sample.mapstruct.relations.domain.Organisation;
-import org.agoncal.sample.mapstruct.relations.dto.AddressDTO;
-import org.agoncal.sample.mapstruct.relations.dto.CountryDTO;
-import org.agoncal.sample.mapstruct.relations.dto.OrganisationDTO;
-import org.agoncal.sample.mapstruct.relations.mapper.OrganisationMapper;
+import org.agoncal.sample.mapstruct.unmapped.domain.Address;
+import org.agoncal.sample.mapstruct.unmapped.domain.Country;
+import org.agoncal.sample.mapstruct.unmapped.domain.Organisation;
+import org.agoncal.sample.mapstruct.unmapped.dto.AddressDTO;
+import org.agoncal.sample.mapstruct.unmapped.dto.CountryDTO;
+import org.agoncal.sample.mapstruct.unmapped.dto.OrganisationDTO;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
